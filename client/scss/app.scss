@@ -1,0 +1,26 @@
+$fontSize: 14px;
+$baseLineHeight : 1.5 !default;
+$linkColor: #08c #333 !default;
+
+@mixin box-sizing($sizing) {
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing: $sizing;
+  box-sizing: $sizing;
+}
+
+*{
+  @include box-sizing(border-box);
+}
+
+body{
+  font-size: $fontSize;
+  line-height: $baseLineHeight;
+}
+
+a {
+  color: nth($linkColor,1);
+  cursor: pointer;
+  &:hover{
+    color: nth($linkColor,2);
+  }
+}
